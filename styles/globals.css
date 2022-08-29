@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.user_grid {
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-template-rows: repeat(auto-fill, 40px);
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.curriculum_grid {
+  grid-template-columns: repeat(auto-fill, 368px);
+  grid-template-rows: repeat(auto-fill, 152px);
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.lecture_grid {
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-template-rows: repeat(auto-fill, 160px);
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.coupon_grid {
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-template-rows: repeat(auto-fill, 144px);
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@layer components {
+  .admin_input {
+    @apply box-border p-2 text-sm w-full mb-4 rounded bg-gray-100
+  }
+
+  .admin_btn {
+    @apply flex justify-center items-center w-full box-border p-2 rounded cursor-pointer bg-gray-100 text-black hover:text-white hover:bg-black duration-300
+  }
+
+  .admin_border {
+    @apply border hover:border-black duration-100 cursor-pointer
+  }
+
+  .admin_before {
+    @apply w-80 border rounded box-border p-4 relative before:absolute before:left-4 before:text-sm before:text-gray-500
+  }
+}
